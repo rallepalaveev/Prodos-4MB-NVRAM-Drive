@@ -3,7 +3,7 @@ A card with 4MB NVRAM for Apple ][ compatible computers which is a ProDOS compli
 
 As of version 5.0 a design change was implemented - a write RAM buffer was added onboard to avoid using the system memory for buferring writes. This required a firmware update, which is now only 512 bytes large and fits completely in block 0001. The minimum firmware version is 42.
 
-Copyright (c) 2022 Ralle Palaveev All rights reserved.
+Copyright (c) 2024 Ralle Palaveev All rights reserved.
 
 Redistribution and use in source, binary, and manufactued forms, with or without modification, are permitted provided that the following conditions are met:
 1. Redistributions of source code and design files must retain the above copyright notice, this list of conditions and the following disclaimer.
