@@ -1,0 +1,51 @@
+Name     NVRAM53-B;
+PartNo   00;
+Date     10/04/2023;
+Revision 01;
+Designer R.Palaveev;
+Company  Cltch;
+Assembly None;
+Location None;
+Device   g22v10;
+
+/** Inputs **/
+
+PIN 1 = IOSelect;
+PIN 2 = DevSel;
+PIN 5 = MD0;
+PIN 6 = MD1;
+PIN 7 = MD2;
+PIN 8 = RW;
+PIN 9 = IOStrobe;
+PIN 10 = MemOn;
+PIN 13 = A2_sw;
+
+/** Outputs **/
+
+PIN 14 = 245_OE;
+PIN 15 = 245_RW;
+PIN 16 = CE_7;
+PIN 17 = CE_6;
+PIN 18 = CE_5;
+PIN 19 = CE_4;
+PIN 20 = CE_3;
+PIN 21 = CE_2;
+PIN 22 = CE_1;
+PIN 23 = CE_0;
+
+/** Intermediate Variables **/
+
+STR_ROM = IOStrobe # MemOn # !(RW $ A2_sw);
+
+/** Logic Equations **/
+
+245_RW = RW;
+245_OE = (IOSelect # !RW) & DevSel & (IOStrobe # MemOn);
+CE_0 = IOSelect & (STR_ROM # MD0 # MD1 # MD2);
+CE_1 = STR_ROM # !MD0 # MD1 # MD2;
+CE_2 = STR_ROM # MD0 # !MD1 # MD2;
+CE_3 = STR_ROM # !MD0 # !MD1 # MD2;
+CE_4 = STR_ROM # MD0 # MD1 # !MD2;
+CE_5 = STR_ROM # !MD0 # MD1 # !MD2;
+CE_6 = STR_ROM # MD0 # !MD1 # !MD2;
+CE_7 = STR_ROM # !MD0 # !MD1 # !MD2;
