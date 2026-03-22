@@ -4,8 +4,14 @@ A card with 4MB NVRAM for Apple ][ compatible computers which is a ProDOS compli
 As of version 5.0 a design change was implemented - a write RAM buffer was added onboard to avoid using the system memory for buffering writes. This required a firmware update, which was also optimized to be now only 512 bytes large and fits completely in block 0001. The minimum firmware version is 42. A sencond PLD is used to combine the functions of the 'LS133 and 'LS138.
 
 Version 5.2 is the same as 5.0, except that all small chips are hidden under the big DIP memory chips.
+Version 5.3 has an additional trainsceiver added to the data bus to reduce the LLT loads on the data lines.
 
-Copyright (c) 2024 Ralle Palaveev All rights reserved.
+Recovery instructions:
+1. Method 1: The card can be fully restored by reprograming of the 8 chips individually by a programmer. The 8 parts of the image are contained in the "8x" subfolder in the zip file.
+2. Method 2: The card can be fully restored in the Apple2 computer by using another mass storage device. The card must be inserted in an empty slot; the .HDV file inside the zip must be mounted by another mass storage device and started; an interactive program will guide the user through the recovery process.
+3. Method 3: The card can be initialized and formatted by using the included in the zip 140kb .dsk image - this would install a bootable ProDOS image with mostly free space. The card must be inserted in an empty slot; the .dsk file inside the zip must be started from a floppy disk; an interactive program will guide the user through the recovery process.
+
+Copyright (c) 2026 Ralle Palaveev All rights reserved.
 
 Redistribution and use in source, binary, and manufactured forms, with or without modification, are permitted provided that the following conditions are met:
 1. Redistributions of source code and design files must retain the above copyright notice, this list of conditions and the following disclaimer.
