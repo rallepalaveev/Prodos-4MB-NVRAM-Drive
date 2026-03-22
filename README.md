@@ -4,6 +4,7 @@ A card with 4MB NVRAM for Apple ][ compatible computers which is a ProDOS compli
 As of version 5.0 a design change was implemented - a write RAM buffer was added onboard to avoid using the system memory for buffering writes. This required a firmware update, which was also optimized to be now only 512 bytes large and fits completely in block 0001. The minimum firmware version is 42. A sencond PLD is used to combine the functions of the 'LS133 and 'LS138.
 
 Version 5.2 is the same as 5.0, except that all small chips are hidden under the big DIP memory chips.
+
 Version 5.3 has an additional trainsceiver added to the data bus to reduce the LLT loads on the data lines.
 
 Recovery instructions:
