@@ -5,12 +5,12 @@ As of version 5.0 a design change was implemented - a write RAM buffer was added
 
 Version 5.2 is the same as 5.0, except that all small chips are hidden under the big DIP memory chips.
 
-Version 5.3 has an additional trainsceiver added to the data bus to reduce the LLT loads on the data lines.
+Version 5.3 has an additional trainsceiver added to the data bus to reduce the TTL loads on the data lines.
 
 Recovery instructions:
-1. Method 1: The card can be fully restored by reprograming of the 8 chips individually by a programmer. The 8 parts of the image are contained in the "8x" subfolder in the zip file.
+1. Method 1: The card can be fully restored by reprograming of the 8 chips individually by a programmer. The 8 parts of the image are contained in the "8x" subfolder in the zip file. This involves removing the chips, programming them and repositioning them.
 2. Method 2: The card can be fully restored in the Apple2 computer by using another mass storage device. The card must be inserted in an empty slot; the .HDV file inside the zip must be mounted by another mass storage device and started; an interactive program will guide the user through the recovery process.
-3. Method 3: The card can be initialized and formatted by using the included in the zip 140kb .dsk image - this would install a bootable ProDOS image with mostly free space. The card must be inserted in an empty slot; the .dsk file inside the zip must be started from a floppy disk; an interactive program will guide the user through the recovery process.
+3. Method 3: The card can be initialized and formatted by using the included in the zip 140kb .dsk image - this would install a new bootable ProDOS image with mostly free space. The card must be inserted in an empty slot; the .dsk file inside the zip must be started from a floppy disk; an interactive program will guide the user through the recovery process.
 
 Copyright (c) 2026 Ralle Palaveev All rights reserved.
 
